@@ -37,7 +37,7 @@ let whichTruthy ; false || '' || [2,3].length || {thisIsTruthy:true}; //
 let userName = prompt("Admin을 입력해주세요",'');
 let pw = prompt("Password?",'') ;
 
-if (userName == 'Admin') {
+if (userName.toUpperCase == 'Admin'.toUpperCase) {
   if (pw == 'TheMaster') {
     alert("환영합니다!");
   } else if (pw == null) {
