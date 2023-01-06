@@ -37,9 +37,9 @@ let calculateTotal = function(){
     console.log(index);
   });
 
-  return arr.reduce(function(acc, item)){
-    return acc + item
-  }
+  // return arr.reduce(function(acc, item)){
+  //   return acc + item
+  // }
   
   console.log(arr);
 
@@ -60,12 +60,33 @@ let namedFunctionExpression = function hello (){};
 
 
 // 콜백 함수 (표현)식
-let callbackFunctionExpression;
+let callbackFunctionExpression = function (url, resolve, reject){
+
+  if(typeof url == 'string'){
+    resolve()
+  } else{
+    reject()
+  }
+};
+
+callbackFunctionExpression(
+  'https://www.naver.com',
+  function(){},
+  function(){}
+)
 
 
 // 함수 선언문 vs. 함수 (표현)식
 
 
-// 즉시 실행 함수 (표현)식
+// 즉시 실행 함수 (표현)식 
 // Immediately Invoked Function Expression
+// 오늘날엔 잘 안씀 
 let IIFE;
+
+(function(){
+
+  console.log('hi')
+})() // 생성과 동시에 실행
+
+// 전역 보호 용도로 주로 실행한다. 
