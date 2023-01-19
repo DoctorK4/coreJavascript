@@ -62,8 +62,8 @@ export function deleteStorage(key){
   })
 }
 
-console.log(saveStorage('name',albums));
-console.log(loadStorage('name'));
+// console.log(saveStorage('name',albums));
+// console.log(loadStorage('name'));
 // loadStorage('name','tiger')
 // deleteStorage('name','tiger')
 
